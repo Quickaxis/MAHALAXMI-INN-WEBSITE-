@@ -1627,6 +1627,31 @@
             }
         }
 
+        @media(max-width: 768px) {
+            #parking>div>div:last-child>div:first-child {
+                grid-template-columns: 1fr 1fr !important;
+            }
+
+            /* Stack the two main columns vertically on mobile */
+            #parking>div>div:last-child {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+            }
+
+            /* Make photos side by side and proper height on mobile */
+            #parking .parking-photos {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 12px !important;
+            }
+
+            #parking .parking-photos>div {
+                height: 160px !important;
+                margin-top: 0 !important;
+                aspect-ratio: unset !important;
+            }
+        }
+
         /* Room Carousel */
         .room-carousel {
             position: relative;
@@ -2280,7 +2305,7 @@
             </div>
 
             <!-- Two column layout: photos left, info right -->
-            <div class="parking-grid" style="
+            <div style="
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
@@ -2288,33 +2313,33 @@
     ">
 
                 <!-- Left: 2 parking photos -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-
+                <div class="parking-photos" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; width:100%;">
                     <!-- Photo 1 -->
                     <div style="
-          height: 260px;
-          border-radius: 16px;
-          border: 2px solid #C9952A;
-          overflow: hidden;
-          background: #f0ebe3;
-        ">
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+    border: 2px solid #C9952A;
+    overflow: hidden;
+    background: #f0ebe3;
+  ">
                         <img src="parking-1.jpg" alt="Car Parking at Mahalaxmi Inn"
                             style="width:100%; height:100%; object-fit:cover; display:block;">
                     </div>
 
                     <!-- Photo 2 -->
                     <div style="
-          height: 260px;
-          border-radius: 16px;
-          border: 2px solid #C9952A;
-          overflow: hidden;
-          background: #f0ebe3;
-          margin-top: 24px;
-        ">
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+    border: 2px solid #C9952A;
+    overflow: hidden;
+    background: #f0ebe3;
+    margin-top: 24px;
+  ">
                         <img src="parking-2.jpg" alt="Car Parking at Mahalaxmi Inn"
                             style="width:100%; height:100%; object-fit:cover; display:block;">
                     </div>
-
                 </div>
 
                 <!-- Right: info cards -->

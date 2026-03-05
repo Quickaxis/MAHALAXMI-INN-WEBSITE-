@@ -1,7 +1,7 @@
-# Task: Refine Location Section Map & Link
+# Task: Replace Booking Modal with Contact Options
 
-- [x] Identify location section in `index.html`
-- [x] Replace Google Maps iframe with the exact pinned location (FIX 1)
-- [x] Update "Get Directions" link with the absolute pinned URL (FIX 2)
-- [x] Verify link and map display
-- [x] Commit and push to GitHub
+- [ ] Replace modal HTML in `index.html` (Step 1)
+- [ ] Update `openModal` and `closeModal` JavaScript functions (Step 2)
+- [ ] Update all "Book Now" and "Book This Room" buttons to use `onclick="openModal()"` (Step 3)
+- [ ] Verify functionality (modal opening/closing, links working)
+- [ ] Push changes to GitHub

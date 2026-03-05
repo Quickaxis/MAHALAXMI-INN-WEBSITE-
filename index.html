@@ -1621,6 +1621,10 @@
             .amenities-grid {
                 grid-template-columns: 1fr;
             }
+
+            #parking .parking-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Room Carousel */
@@ -2236,6 +2240,185 @@
                 <h3>Car Parking</h3>
                 <p>Spacious parking available for 10 or more vehicles on the premises</p>
             </div>
+        </div>
+    </section>
+
+    <!-- CAR PARKING SECTION -->
+    <section id="parking" style="padding: 80px 0; background: var(--bg);">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px;">
+
+            <!-- Section header -->
+            <div style="text-align:center; margin-bottom: 48px;">
+                <span style="
+        background: rgba(201,149,42,0.12);
+        color: #C9952A;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        padding: 6px 18px;
+        border-radius: 50px;
+        text-transform: uppercase;
+      ">OUR FACILITIES</span>
+
+                <h2 style="
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 44px;
+        color: var(--text);
+        margin: 12px 0 8px;
+        font-weight: 600;
+      ">Spacious Car Parking</h2>
+
+                <p style="
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        color: var(--muted);
+        max-width: 520px;
+        margin: 0 auto;
+        line-height: 1.7;
+      ">We offer secure, open-air parking for 10 or more vehicles right on the premises — free for all guests.</p>
+            </div>
+
+            <!-- Two column layout: photos left, info right -->
+            <div class="parking-grid" style="
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    ">
+
+                <!-- Left: 2 parking photos -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+
+                    <!-- Photo 1 -->
+                    <div style="
+          height: 260px;
+          border-radius: 16px;
+          border: 2px solid #C9952A;
+          overflow: hidden;
+          background: #f0ebe3;
+        ">
+                        <img src="parking-1.jpg" alt="Car Parking at Mahalaxmi Inn"
+                            style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div style="
+          height: 260px;
+          border-radius: 16px;
+          border: 2px solid #C9952A;
+          overflow: hidden;
+          background: #f0ebe3;
+          margin-top: 24px;
+        ">
+                        <img src="parking-2.jpg" alt="Car Parking at Mahalaxmi Inn"
+                            style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+
+                </div>
+
+                <!-- Right: info cards -->
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+
+                    <!-- Card 1 -->
+                    <div style="
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-left: 4px solid #C9952A;
+          border-radius: 16px;
+          padding: 24px;
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+        ">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9952A" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;">
+                            <rect x="1" y="3" width="15" height="13" rx="2" />
+                            <path d="M16 8h4l3 3v5h-7V8z" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                        <div>
+                            <h3
+                                style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--text); margin:0 0 4px;">
+                                10+ Vehicle Capacity</h3>
+                            <p
+                                style="font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); margin:0; line-height:1.6;">
+                                Large open-air parking area accommodating cars, SUVs, and small vans with ease.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div style="
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-left: 4px solid #B22222;
+          border-radius: 16px;
+          padding: 24px;
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+        ">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B22222" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <div>
+                            <h3
+                                style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--text); margin:0 0 4px;">
+                                Safe and Secure</h3>
+                            <p
+                                style="font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); margin:0; line-height:1.6;">
+                                Gated premises with 24 hour front desk oversight. Your vehicle is always in safe hands.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div style="
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-left: 4px solid #C9952A;
+          border-radius: 16px;
+          padding: 24px;
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+        ">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9952A" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px;">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        <div>
+                            <h3
+                                style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--text); margin:0 0 4px;">
+                                Available 24 Hours</h3>
+                            <p
+                                style="font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); margin:0; line-height:1.6;">
+                                Drive in and out at any time. No restrictions on parking hours for hotel guests.</p>
+                        </div>
+                    </div>
+
+                    <!-- Free badge -->
+                    <div style="
+          background: linear-gradient(135deg, #8B1010, #B22222);
+          border-radius: 16px;
+          padding: 20px 28px;
+          text-align: center;
+        ">
+                        <p
+                            style="font-family:'Cormorant Garamond',serif; font-size:24px; color:white; margin:0; font-weight:600;">
+                            Complimentary for All Guests</p>
+                        <p
+                            style="font-family:'Inter',sans-serif; font-size:13px; color:rgba(255,255,255,0.8); margin:6px 0 0;">
+                            No
+                            extra charge · Available on request at front desk</p>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
     <section id="reviews" style="padding:80px 0; background:var(--surface-2); overflow:hidden;">

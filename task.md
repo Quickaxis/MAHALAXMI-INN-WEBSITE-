@@ -1,8 +1,6 @@
-# Task: Refine Car Parking Mobile Layout
-
-- [x] Update parking grid style (Fix 1)
-- [x] Implement side-by-side photos with `aspect-ratio` (Fix 2)
-- [x] Add specific responsive CSS for parking section (Fix 3)
-- [x] Add `parking-photos` class for targeted styling
-- [x] Verify mobile layout responsiveness
-- [x] Commit and push to GitHub
+- [x] Update "Get Directions" button link and styling (FIX 1)
+- [x] Replace all WhatsApp links with the specific pre-filled URL (FIX 2)
+- [x] Replace all `tel:` links with the new number (FIX 3)
+- [x] Update booking modal JavaScript submission logic (FIX 4)
+- [x] Update all footer and contact text references (FIX 5)
+- [x] Push all changes to GitHub

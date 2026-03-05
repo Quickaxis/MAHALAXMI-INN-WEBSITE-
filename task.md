@@ -1,6 +1,7 @@
-- [x] Update "Get Directions" button link and styling (FIX 1)
-- [x] Replace all WhatsApp links with the specific pre-filled URL (FIX 2)
-- [x] Replace all `tel:` links with the new number (FIX 3)
-- [x] Update booking modal JavaScript submission logic (FIX 4)
-- [x] Update all footer and contact text references (FIX 5)
-- [x] Push all changes to GitHub
+# Task: Refine Location Section Map & Link
+
+- [x] Identify location section in `index.html`
+- [x] Replace Google Maps iframe with the exact pinned location (FIX 1)
+- [x] Update "Get Directions" link with the absolute pinned URL (FIX 2)
+- [x] Verify link and map display
+- [x] Commit and push to GitHub

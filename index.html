@@ -1,0 +1,3580 @@
+<!-- 
+  HERO IMAGES:
+  Save your daytime hotel photo  as: hero-day.jpg
+  Save your nighttime hotel photo as: hero-night.jpg
+  Place both files in the same folder as index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mahalaxmi Inn | Hotel in Dibrugarh, Assam | Book Direct</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="The Mahalaxmi Inn offers comfortable AC rooms in Dibrugarh, Assam with free WiFi, hot geyser, power backup and 24hr front desk. Book direct for best rates.">
+    <meta name="keywords"
+        content="hotel in Dibrugarh, Mahalaxmi Inn Dibrugarh, AC rooms Dibrugarh, budget hotel Assam, Kunjaban Path hotel, Dibrugarh Bypass Road hotel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mahalaxmiinn.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Mahalaxmi Inn | Hotel in Dibrugarh, Assam">
+    <meta property="og:description"
+        content="Comfortable stays in the heart of Dibrugarh. AC rooms, free WiFi, 24hr service. Book direct.">
+    <meta property="og:url" content="https://www.mahalaxmiinn.com/">
+    <meta property="og:image" content="https://www.mahalaxmiinn.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Mahalaxmi Inn | Hotel in Dibrugarh">
+    <meta name="twitter:description" content="Warm hospitality and clean rooms in Dibrugarh, Assam.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Hotel",
+            "name": "The Mahalaxmi Inn",
+            "description": "Premium hotel in Dibrugarh, Assam offering Standard, Deluxe, and Suite rooms with warm hospitality.",
+            "image": [
+                "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop"
+            ],
+            "priceRange": "₹1000 - ₹1800",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "House No 100, Pub Banipur, Kunjaban Path",
+                "addressLocality": "Dibrugarh",
+                "addressRegion": "Assam",
+                "postalCode": "786003",
+                "addressCountry": "IN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 26.4890,
+                "longitude": 94.9028
+            },
+            "url": "https://mahalaxmiinn.com",
+            "telephone": "+918822983468",
+            "amenityFeature": [
+                { "@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": "true" },
+                { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": "true" },
+                { "@type": "LocationFeatureSpecification", "name": "Breakfast Included", "value": "true" }
+            ],
+            "containsPlace": [
+                { "@type": "HotelRoom", "name": "Standard Room", "price": "1000", "priceCurrency": "INR" },
+                { "@type": "HotelRoom", "name": "Deluxe Non AC", "price": "1200", "priceCurrency": "INR" },
+                { "@type": "HotelRoom", "name": "Deluxe AC", "price": "1500", "priceCurrency": "INR" },
+                { "@type": "HotelRoom", "name": "Grand Suite", "price": "1800", "priceCurrency": "INR" }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "20"
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="image" href="hero-day.jpg">
+    <link rel="preload" as="image" href="hero-night.jpg">
+
+    <style>
+        :root {
+            --hero-bg: url('hero-day.jpg');
+            --hero-bg-next: url('hero-night.jpg');
+            --bg: #FAF6F0;
+            --surface: #FFFFFF;
+            --surface-2: #F2EBE0;
+            --red: #B22222;
+            --gold: #C9952A;
+            --text: #1A1A1A;
+            --muted: #6B6B6B;
+            --border: #E8DDD0;
+            --radius-card: 20px;
+            --radius-btn: 50px;
+            --radius-input: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html.night {
+            --hero-bg: url('hero-night.jpg');
+            --hero-bg-next: url('hero-day.jpg');
+            --bg: #0F0A0A;
+            --surface: #1A1010;
+            --surface-2: #211515;
+            --red: #C9352A;
+            --gold: #D4A83A;
+            --text: #F5EEE6;
+            --muted: #A09080;
+            --border: #2E1F1F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Global Rules */
+        button {
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: var(--radius-card);
+        }
+
+        section {
+            padding: 80px 24px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pill-label {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            background: rgba(201, 149, 42, 0.12);
+            color: var(--gold);
+            border: 1px solid rgba(201, 149, 42, 0.35);
+            margin-bottom: 16px;
+        }
+
+        .pill-label.red {
+            background: var(--red);
+            color: white;
+            border: none;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+            max-width: 1160px;
+            z-index: 1000;
+
+            /* Apple glassmorphism */
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(24px) saturate(200%);
+            -webkit-backdrop-filter: blur(24px) saturate(200%);
+
+            /* Floating full pill shape */
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.10),
+                0 1px 0 rgba(255, 255, 255, 0.6) inset;
+
+            padding: 10px 14px 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media(max-width:768px) {
+            nav {
+                border-radius: 100px;
+                width: calc(100% - 24px);
+            }
+        }
+
+        /* Night mode */
+        html.night nav {
+            background: rgba(20, 12, 12, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.45),
+                0 1px 0 rgba(255, 255, 255, 0.05) inset;
+        }
+
+        /* Scrolled state — slightly more opaque */
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.88);
+            box-shadow:
+                0 12px 40px rgba(0, 0, 0, 0.13),
+                0 1px 0 rgba(255, 255, 255, 0.7) inset;
+        }
+
+        html.night nav.scrolled {
+            background: rgba(20, 12, 12, 0.90);
+        }
+
+        /* Logo */
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            background: linear-gradient(90deg, #B22222, #C9952A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        /* Nav links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links .nav-link {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 50px;
+            transition: background 0.2s, color 0.2s;
+            letter-spacing: 0.01em;
+            opacity: 0.75;
+        }
+
+        .nav-links .nav-link:hover {
+            background: rgba(178, 34, 34, 0.08);
+            color: var(--red);
+            opacity: 1;
+        }
+
+        /* Right side controls */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Theme toggle */
+        #themeToggle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(178, 34, 34, 0.2);
+            background: rgba(178, 34, 34, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--red);
+            padding: 0;
+        }
+
+        #themeToggle:hover {
+            background: rgba(178, 34, 34, 0.14);
+            transform: rotate(20deg);
+        }
+
+        #themeToggle svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        #themeToggle .moon-icon {
+            display: none;
+        }
+
+        html.night #themeToggle .sun-icon {
+            display: none;
+        }
+
+        html.night #themeToggle .moon-icon {
+            display: block;
+        }
+
+        /* Book Now button */
+        .nav-book-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 14px rgba(178, 34, 34, 0.35);
+        }
+
+        .nav-book-btn:hover {
+            background: #9B1C1C;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(178, 34, 34, 0.45);
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: #FFFFFF;
+            padding: 10px 24px;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn-gold-outline {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 24px;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .btn-red-outline {
+            border: 1px solid var(--red);
+            color: var(--red);
+            padding: 10px 24px;
+            border-radius: var(--radius-btn);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Hamburger - mobile only */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--red);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: rgba(250, 246, 240, 0.98);
+            backdrop-filter: blur(24px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            clip-path: circle(0% at 100% 0%);
+            transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html.night .mobile-menu {
+            background: rgba(15, 10, 10, 0.98);
+        }
+
+        .mobile-menu.open {
+            clip-path: circle(150% at 100% 0%);
+        }
+
+        .mobile-menu .nav-link {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            color: var(--text);
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                top: 10px;
+                width: calc(100% - 24px);
+                padding: 12px 20px;
+            }
+
+            .nav-links,
+            .nav-book-btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
+
+        /* Hero */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFF;
+            overflow: hidden;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 560px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: var(--gold);
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0) translateX(-50%);
+            }
+
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+
+        /* Stats Bar */
+        .stats-bar-wrapper {
+            padding: 0 24px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .stats-bar {
+            margin: -60px auto 0;
+            background: var(--surface);
+            border-radius: var(--radius-card);
+            border: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            max-width: 860px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-item {
+            padding: 24px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--red);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Why Choose Us */
+        #why-us {
+            background: var(--surface-2);
+            text-align: center;
+        }
+
+        #why-us h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .subtext {
+            color: var(--muted);
+            margin-bottom: 50px;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .why-us-card {
+            background: var(--surface);
+            padding: 40px 24px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .why-us-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: var(--gold);
+        }
+
+        .why-us-card svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--red);
+            stroke-width: 1.5;
+            fill: none;
+            margin-bottom: 24px;
+        }
+
+        .why-us-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .why-us-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* Breakfast Banner */
+        .breakfast-banner {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        .breakfast-img {
+            width: 45%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .breakfast-content {
+            padding: 48px;
+            flex: 1;
+        }
+
+        .breakfast-content h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .breakfast-content p {
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .small-pills {
+            display: flex;
+            gap: 10px;
+        }
+
+        .small-pills span {
+            background: var(--surface-2);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img-box {
+            position: relative;
+            border-radius: var(--radius-card);
+            border: 2px solid var(--gold);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .red-line {
+            width: 60px;
+            height: 3px;
+            background: var(--red);
+            border-radius: 4px;
+            margin: 12px 0 20px;
+        }
+
+        .about-content h2 {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-content h2 {
+                font-size: 36px;
+            }
+        }
+
+        /* Rooms Section */
+        .rooms-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 980px;
+            margin: 48px auto 0;
+            padding: 0 24px;
+        }
+
+        .room-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 48px rgba(201, 149, 42, 0.12);
+        }
+
+        .room-img {
+            height: 260px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .room-body {
+            padding: 32px;
+        }
+
+        .room-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 16px;
+        }
+
+        .room-amenities {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .amenity-pill {
+            background: var(--surface-2);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .room-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .room-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--red);
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 20px;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: var(--red);
+            color: #FFF;
+            padding: 6px 45px;
+            font-size: 11px;
+            font-weight: 800;
+            transform: rotate(45deg);
+            z-index: 5;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Reviews */
+        .reviews-stage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 40px;
+            max-height: 640px;
+            overflow: hidden;
+            mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    black 12%,
+                    black 88%,
+                    transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    black 12%,
+                    black 88%,
+                    transparent 100%);
+        }
+
+        @media (max-width: 768px) {
+            .reviews-stage {
+                grid-template-columns: 1fr;
+                max-height: 500px;
+                padding: 0 20px;
+            }
+
+            .reviews-col:nth-child(2),
+            .reviews-col:nth-child(3) {
+                display: none;
+            }
+        }
+
+        .reviews-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Duplicate cards inside each column for seamless loop */
+        .col-up {
+            animation: scrollUp 28s linear infinite;
+        }
+
+        .col-down {
+            animation: scrollDown 32s linear infinite;
+        }
+
+        .col-up:nth-child(3) {
+            animation-duration: 24s;
+        }
+
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(-50%);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .reviews-stage:hover .reviews-col {
+            animation-play-state: paused;
+        }
+
+        .review-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            flex-shrink: 0;
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .review-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 32px rgba(201, 149, 42, 0.15);
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 10px;
+        }
+
+        .review-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 17px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 14px;
+        }
+
+        .review-author {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .review-meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        .review-source {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            background: rgba(201, 149, 42, 0.1);
+            padding: 3px 10px;
+            border-radius: 50px;
+        }
+
+        /* Restaurant */
+        #restaurant {
+            background: var(--surface);
+            padding: 80px 24px;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 48px auto 0;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .restaurant-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .restaurant-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .restaurant-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Homestay */
+        #homestay {
+            background: var(--surface-2);
+            padding: 80px 24px;
+        }
+
+        .homestay-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .homestay-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto 40px;
+        }
+
+        .homestay-card {
+            background: var(--surface);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .homestay-card:hover {
+            transform: translateY(-6px);
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 12px 40px rgba(201, 149, 42, 0.15);
+        }
+
+        .homestay-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .homestay-body {
+            padding: 24px;
+        }
+
+        .homestay-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: #FFF;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .homestay-features {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .homestay-features span {
+            background: var(--surface-2);
+            color: var(--text);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .homestay-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .homestay-price {
+            font-size: 22px;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .btn-gold-full {
+            display: block;
+            width: 100%;
+            text-align: center;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .btn-gold-full:hover {
+            background: var(--gold);
+            color: #FFF;
+        }
+
+        .homestay-banner {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px 32px;
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .homestay-banner-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .homestay-banner-item svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        @media (max-width: 900px) {
+            .homestay-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Amenities */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 48px auto 0;
+            padding: 0 24px;
+        }
+
+        .amenity-card {
+            background: var(--surface);
+            padding: 40px 32px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .amenity-card svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--red);
+            stroke-width: 1.5;
+            fill: none;
+            margin-bottom: 24px;
+        }
+
+        .amenity-card:hover {
+            transform: scale(1.02);
+            border-color: var(--gold);
+        }
+
+        /* Policies */
+        .policies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .policy-card {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .policy-card.red {
+            border-top: 4px solid var(--red);
+        }
+
+        .policy-card.gold {
+            border-top: 4px solid var(--gold);
+        }
+
+        .policy-card h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .policy-card h3 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--red);
+        }
+
+        .policy-list {
+            list-style: none;
+        }
+
+        .policy-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .policy-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* CTA Section */
+        .cta-banner {
+            background: linear-gradient(135deg, #B22222, #800000);
+            border-radius: 30px;
+            padding: 80px 40px;
+            text-align: center;
+            color: #FFF;
+            position: relative;
+            overflow: hidden;
+            border-top: 2px solid var(--gold);
+        }
+
+        .cta-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 10% 20%, rgba(201, 149, 42, 0.2) 0%, transparent 40%);
+        }
+
+        .cta-banner h2 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            color: #FFF;
+        }
+
+        .cta-banner p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-white {
+            background: #FFF;
+            color: var(--red);
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-wa-cta {
+            background: #25D366;
+            color: #FFF;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Location */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .location-info {
+            padding: 40px;
+            background: var(--surface);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .location-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .location-row svg {
+            width: 22px;
+            height: 22px;
+            color: var(--red);
+            flex-shrink: 0;
+        }
+
+        .location-row p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface-2);
+            border-top: 3px solid var(--red);
+            padding: 60px 40px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 48px;
+            max-width: 1100px;
+            margin: 0 auto 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .footer-brand .logo {
+            display: inline-block;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, var(--red), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            max-width: 260px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text);
+            margin-bottom: 24px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 2.2;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* Modal Refinement */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.4s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal {
+            background: var(--surface);
+            padding: 48px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 480px;
+            transform: translateY(100px);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+
+        .modal-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-wa {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-call {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--surface-2);
+            color: var(--text);
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid var(--border);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--muted);
+            padding: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--surface-2);
+            color: var(--text);
+            font-family: inherit;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Animations */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Layouts */
+        @media (max-width: 900px) {
+
+            .nav-links,
+            .nav-right .btn-red {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                padding: 12px 24px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: -40px;
+            }
+
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .breakfast-banner {
+                flex-direction: column;
+            }
+
+            .breakfast-img {
+                width: 100%;
+                height: 260px;
+            }
+
+            .rooms-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .policies-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-banner h2 {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .why-us-grid,
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Room Carousel */
+        .room-carousel {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            /* increased from 240px */
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+            cursor: zoom-in;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .carousel-track img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.45);
+            border: none;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            z-index: 2;
+        }
+
+        .carousel-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(178, 34, 34, 0.75);
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+  HERO IMAGES — place in same folder as index.html:
+  Day photo   → gallery/day and night picture/day.jpg
+  Night photo → gallery/day and night picture/night.jpg
+-->
+
+    <nav>
+        <a href="#" class="logo">THE MAHALAXMI INN</a>
+        <div class="nav-links">
+            <a href="#rooms" class="nav-link">Rooms</a>
+            <a href="#amenities" class="nav-link">Amenities</a>
+            <a href="#reviews" class="nav-link">Reviews</a>
+            <a href="#location" class="nav-link">Location</a>
+        </div>
+        <div class="nav-right">
+            <button class="nav-book-btn open-modal">Book Now</button>
+            <button class="theme-toggle" id="themeToggle" title="Switch to night view" aria-label="Toggle Night Mode">
+                <svg viewBox="0 0 24 24" class="moon-icon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+                <svg viewBox="0 0 24 24" class="sun-icon">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+            </button>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <a href="#rooms" class="nav-link">Rooms</a>
+        <a href="#restaurant" class="nav-link">Restaurant</a>
+        <a href="#homestay" class="nav-link">Homestay</a>
+        <a href="#amenities" class="nav-link">Amenities</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#location" class="nav-link">Location</a>
+        <button class="btn-red open-modal" style="width: 100%; margin-top: 24px;">Book Now</button>
+    </div>
+
+    <section class="hero" id="hero">
+        <!-- Background image tag — easy to swap -->
+        <img id="hero-img" src="gallery/day and night picture/day.jpg" alt="The Mahalaxmi Inn Dibrugarh"
+            style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0; transition: opacity 0.8s ease;">
+        <!-- Dark overlay -->
+        <div
+            style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.65)); z-index:1;">
+        </div>
+        <!-- Hero content -->
+        <div class="hero-content" style="position:relative; z-index:2;">
+            <div class="pill-label">WELCOME TO DIBRUGARH</div>
+            <h1>The Mahalaxmi Inn</h1>
+            <p>Experience the perfect blend of comfort,
+                cleanliness,
+                and warm Assamese hospitality. Your ideal stay for business or leisure.</p>
+            <div class="hero-btns"><button class="btn-red open-modal">Book Now</button><a href="#rooms"
+                    class="btn-gold-outline">Explore Rooms</a></div>
+        </div>
+        <div class="scroll-indicator" style="position:relative; z-index:2;"><svg width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg></div>
+    </section>
+    <div class="stats-bar-wrapper">
+        <div class="stats-bar">
+            <div class="stat-item"><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg><span class="stat-value" style="color:var(--gold);">24/7</span><span class="stat-label">Front
+                    Desk</span></div>
+            <div class="stat-item"><svg viewBox="0 0 24 24">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <line x1="12" y1="20" x2="12.01" y2="20" />
+                </svg><span class="stat-value" style="color:var(--gold);">Free</span><span
+                    class="stat-label">WiFi</span></div>
+            <div class="stat-item"><svg viewBox="0 0 24 24">
+                    <line x1="12" y1="2" x2="12" y2="22" />
+                    <line x1="20" y1="12" x2="4" y2="12" />
+                    <line x1="17.66" y1="17.66" x2="6.34" y2="6.34" />
+                    <line x1="17.66" y1="6.34" x2="6.34" y2="17.66" />
+                </svg><span class="stat-value" style="color:var(--gold);">AC</span><span
+                    class="stat-label">Available</span></div>
+            <div class="stat-item"><svg viewBox="0 0 24 24">
+                    <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg><span class="stat-value" style="color:var(--gold);">4.9★</span><span class="stat-label">Guest
+                    Rating</span></div>
+        </div>
+    </div>
+    <section id="why-us">
+        <div class="container">
+            <h2 style="text-shadow: 0 0 40px rgba(201,149,42,0.12);">Why Guests Choose The Mahalaxmi Inn</h2>
+            <p class="subtext">More than a hotel. A home away from home in the heart of Dibrugarh.</p>
+            <div class="why-us-grid">
+                <div class="why-us-card"><svg viewBox="0 0 24 24">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <h3>Prime Location</h3>
+                    <p>Minutes from Dibrugarh city centre,
+                        bypass road access,
+                        and 9 km from the airport.</p>
+                </div>
+                <div class="why-us-card"><svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                    </svg>
+                    <h3>Friendly Staff</h3>
+                    <p>Our team is available 24 hours a day to ensure your stay is seamless and comfortable.</p>
+                </div>
+                <div class="why-us-card"><svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    <h3>Safe and Secure</h3>
+                    <p>Well-maintained property with power backup,
+                        secure entry,
+                        and attentive front desk service.</p>
+                </div>
+                <div class="why-us-card"><svg viewBox="0 0 24 24">
+                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                        <line x1="7" y1="7" x2="7.01" y2="7" />
+                    </svg>
+                    <h3>Best Value</h3>
+                    <p>Quality rooms at honest prices. Book direct and always get the best available rate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="container">
+        <div class="about-grid">
+            <div class="about-img-box"><img
+                    src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop"
+                    alt="The Mahalaxmi Inn Lobby"></div>
+            <div class="about-content">
+                <div class="pill-label">OUR STORY</div>
+                <h2 style="text-shadow: 0 0 40px rgba(201,149,42,0.12);">A Stay You Will Remember</h2>
+                <div class="red-line" style="background: linear-gradient(90deg, var(--red), var(--gold));"></div>
+                <p>Tucked away on Kunjaban Path off the Dibrugarh Bypass Road,
+                    The Mahalaxmi Inn is a peaceful urban retreat built for travellers who value cleanliness,
+                    comfort,
+                    and genuine hospitality. Whether visiting for business or leisure,
+                    our attentive staff and well appointed rooms ensure you feel right at home.</p><button
+                    class="btn-red-outline"
+                    onclick="document.getElementById('rooms').scrollIntoView({behavior:'smooth'})">Explore Our
+                    Rooms</button>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="breakfast-banner"><img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop"
+                class="breakfast-img" alt="Hot Breakfast">
+            <div class="breakfast-content">
+                <div class="pill-label">INCLUDED WITH YOUR STAY</div>
+                <h2 style="text-shadow: 0 0 40px rgba(201,149,42,0.12);">Wake Up to a Hot Breakfast</h2>
+                <p>Start every morning right. Our in-house restaurant serves a freshly prepared home-cooked breakfast
+                    and lunch daily. Choose the meal plan that suits you — vegetarian or non-vegetarian — and enjoy
+                    wholesome Assamese flavours right at your doorstep.</p>
+                <div class="breakfast-pills" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;">
+                    <span
+                        style="background:var(--surface-2); border:1px solid var(--gold); color:var(--gold); font-family:'Inter',sans-serif; font-size:12px; font-weight:600; padding:8px 16px; border-radius:50px; letter-spacing:0.04em;">
+                        Breakfast + Lunch Included
+                    </span>
+                    <span
+                        style="background:#2d6a2d; color:white; font-family:'Inter',sans-serif; font-size:12px; font-weight:600; padding:8px 16px; border-radius:50px; letter-spacing:0.04em;">
+                        Veg — ₹2,200 / night
+                    </span>
+                    <span
+                        style="background:#8B1010; color:white; font-family:'Inter',sans-serif; font-size:12px; font-weight:600; padding:8px 16px; border-radius:50px; letter-spacing:0.04em;">
+                        Non-Veg — ₹2,400 / night
+                    </span>
+                    <span
+                        style="background:var(--surface-2); border:1px solid var(--border); color:var(--muted); font-family:'Inter',sans-serif; font-size:12px; padding:8px 16px; border-radius:50px;">
+                        Home Cooked Daily
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="restaurant">
+        <div class="restaurant-grid">
+            <div>
+                <div class="pill-label" style="background:var(--gold);color:#fff;border-color:transparent;">ON-SITE
+                    DINING</div>
+                <h2
+                    style="font-family:'Cormorant Garamond',serif; margin:16px 0 12px; text-shadow:0 0 40px rgba(201,149,42,0.12);">
+                    Mahalaxmi Restaurant</h2>
+                <div
+                    style="height:3px; width:60px; background:linear-gradient(90deg, var(--red), var(--gold)); margin-bottom:24px;">
+                </div>
+                <p style="color:var(--muted); line-height:1.6; margin-bottom:24px;">Savour the authentic flavours of
+                    Assam right at your doorstep. Our in-house restaurant serves freshly prepared home-style meals
+                    using local ingredients — from a hearty breakfast to a satisfying dinner. No need to step out;
+                    great food is always just around the corner.</p>
+                <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px;"><span
+                        style="font-size:12px; font-weight:600; padding:6px 16px; border-radius:50px; background:var(--surface-2);">Breakfast
+                        Included</span><span
+                        style="font-size:12px; font-weight:600; padding:6px 16px; border-radius:50px; background:var(--surface-2);">Lunch
+                        Available</span><span
+                        style="font-size:12px; font-weight:600; padding:6px 16px; border-radius:50px; background:var(--surface-2);">Dinner
+                        Service</span></div><a href="menu-page1.html" target="_blank"
+                    style="display:inline-block; padding:18px 48px; border:2px solid #C9952A; border-radius:50px; color:#C9952A; font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; text-decoration:none; letter-spacing:0.06em; margin-top:16px; transition:all 0.25s ease; box-shadow:0 4px 16px rgba(201,149,42,0.15);"
+                    onmouseover="this.style.background='#C9952A'; this.style.color='white'; this.style.boxShadow='0 6px 24px rgba(201,149,42,0.35)';"
+                    onmouseout="this.style.background='transparent'; this.style.color='#C9952A'; this.style.boxShadow='0 4px 16px rgba(201,149,42,0.15)';">View
+                    Full Menu</a>
+            </div>
+            <div class="restaurant-images"><img
+                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&auto=format&fit=crop"
+                    alt="Breakfast"><img
+                    src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&auto=format&fit=crop"
+                    alt="Local Dish"><img
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop"
+                    alt="Healthy Meal"><img
+                    src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=600&auto=format&fit=crop"
+                    alt="Dinner"></div>
+        </div>
+    </section>
+    <section id="homestay">
+        <div class="homestay-header">
+            <div class="pill-label" style="background:var(--gold);color:#fff;border-color:transparent;">EXTENDED
+                STAYS </div>
+            <h2 style="font-size:42px; margin:16px 0; text-shadow:0 0 40px rgba(201,149,42,0.12);">Mahalaxmi
+                Homestay </h2>
+            <p style="color:var(--muted); max-width:600px; margin:0 auto;">Looking for more space and a homely
+                feel? Our exclusive 2BHK homestay units offer the perfect home away from home for families,
+                groups,
+                and long-stay guests.</p>
+        </div>
+        <div class="homestay-grid">
+            <div class="homestay-card"><img
+                    src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&auto=format&fit=crop"
+                    class="homestay-img" alt="2BHK Unit 1">
+                <div class="homestay-body"><span class="homestay-badge">2BHK UNIT 1</span>
+                    <div class="homestay-features"><span>2 Bedrooms</span><span>Living
+                            Room</span><span>Kitchen</span><span>WiFi</span></div>
+                    <p class="homestay-desc">A fully furnished 2BHK unit with a cosy living area,
+                        attached kitchen,
+                        and all modern amenities. Perfect for families.</p>
+                    <div class="homestay-price">Contact for Pricing</div><a href="https://wa.me/911234567890"
+                        target="_blank" class="btn-gold-full">Enquire Now</a>
+                </div>
+            </div>
+            <div class="homestay-card"><img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop"
+                    class="homestay-img" alt="2BHK Unit 2">
+                <div class="homestay-body"><span class="homestay-badge">2BHK UNIT 2</span>
+                    <div class="homestay-features"><span>2 Bedrooms</span><span>Living
+                            Room</span><span>Kitchen</span><span>WiFi</span></div>
+                    <p class="homestay-desc">A fully furnished 2BHK unit with a cosy living area,
+                        attached kitchen,
+                        and all modern amenities. Perfect for families.</p>
+                    <div class="homestay-price">Contact for Pricing</div><a href="https://wa.me/911234567890"
+                        target="_blank" class="btn-gold-full">Enquire Now</a>
+                </div>
+            </div>
+            <div class="homestay-card"><img
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&auto=format&fit=crop"
+                    class="homestay-img" alt="2BHK Unit 3">
+                <div class="homestay-body"><span class="homestay-badge">2BHK UNIT 3</span>
+                    <div class="homestay-features"><span>2 Bedrooms</span><span>Living
+                            Room</span><span>Kitchen</span><span>WiFi</span></div>
+                    <p class="homestay-desc">A fully furnished 2BHK unit with a cosy living area,
+                        attached kitchen,
+                        and all modern amenities. Perfect for families.</p>
+                    <div class="homestay-price">Contact for Pricing</div><a href="https://wa.me/911234567890"
+                        target="_blank" class="btn-gold-full">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="homestay-banner">
+            <div class="homestay-banner-item"><svg viewBox="0 0 24 24">
+                    <path d="M22 12h-4V8c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v4H2v8h20v-8zm-6-4v4H8V8h8z" />
+                </svg>3 Units Available </div>
+            <div class="homestay-banner-item"><svg viewBox="0 0 24 24">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>Ideal for Families and Groups </div>
+            <div class="homestay-banner-item"><svg viewBox="0 0 24 24">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>Long Stay Discounts </div>
+        </div>
+    </section>
+    <!--
+  ROOM IMAGE FILES — 3 photos per room, same folder as index.html:
+
+  Standard Room:
+    room-standard-1.jpg  |  room-standard-2.jpg  |  room-standard-3.jpg
+
+  Deluxe Non AC:
+    room-deluxe-nonac-1.jpg  |  room-deluxe-nonac-2.jpg  |  room-deluxe-nonac-3.jpg
+
+  Deluxe AC:
+    room-deluxe-ac-1.jpg  |  room-deluxe-ac-2.jpg  |  room-deluxe-ac-3.jpg
+
+  Grand Suite:
+    room-grand-suite-1.jpg  |  room-grand-suite-2.jpg  |  room-grand-suite-3.jpg
+-->
+    <section id="rooms" class="container">
+        <div class="rooms-header">
+            <div class="pill-label red">OUR ROOMS</div>
+            <h2
+                style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:44px; margin-bottom:8px; text-shadow: 0 0 40px rgba(201,149,42,0.12);">
+                Rest in Comfort</h2>
+            <p style="text-align:center; color:var(--muted); font-size:15px; margin-bottom:48px;">Choose the room that
+                suits your needs and budget</p>
+        </div>
+        <div class="rooms-grid">
+            <div class="room-card">
+                <div class="room-carousel" id="carousel-standard">
+                    <div class="carousel-track" onclick="openLightbox('carousel-standard')">
+                        <img src="gallery/all pictures/1000 rupees standard room/a13181c8-fa33-4559-ace5-346a4ba12fba.jpg"
+                            alt="Standard Room" onerror="this.src=''; this.style.background='#f0ebe3';">
+                        <img src="gallery/all pictures/1000 rupees standard room/dd257e18-a5cb-45df-9c8a-7b931614f86f.jpg"
+                            alt="Standard Room">
+                        <img src="gallery/all pictures/1000 rupees standard room/95b7fbe5-6a61-4957-8b91-424cbc0620d1.jpg"
+                            alt="Standard Room">
+                    </div>
+                    <button class="carousel-btn prev" onclick="slideCarousel('carousel-standard', -1)"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg></button>
+                    <button class="carousel-btn next" onclick="slideCarousel('carousel-standard', 1)"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide('carousel-standard', 0)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-standard', 1)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-standard', 2)"></span>
+                    </div>
+                </div>
+                <div class="room-body"><span class="room-badge" style="background:#888;">STANDARD</span>
+                    <div class="room-amenities"><span class="amenity-pill">Free WiFi</span><span
+                            class="amenity-pill">Power Backup</span><span class="amenity-pill">Geyser</span>
+                    </div>
+                    <p class="room-desc">A clean,
+                        comfortable room perfect for budget-conscious travellers who need a good night's
+                        rest.</p>
+                    <div class="room-price" style="color:var(--gold);">From ₹1,000 / night</div><button
+                        class="btn-red open-modal">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-carousel" id="carousel-deluxe-nonac">
+                    <div class="carousel-track" onclick="openLightbox('carousel-deluxe-nonac')">
+                        <img src="gallery/all pictures/1200 rupees room/f69b4e5d-9413-4933-b0d2-bfcec70920f2.jpg"
+                            alt="Deluxe Non AC" onerror="this.src=''; this.style.background='#f0ebe3';">
+                        <img src="gallery/all pictures/1200 rupees room/15cf497a-87aa-4d8e-bd1b-4bd4e0b6d116.jpg"
+                            alt="Deluxe Non AC">
+                        <img src="gallery/all pictures/1200 rupees room/40d5d1c7-8f59-43e7-858c-b8a3a1000b3b.jpg"
+                            alt="Deluxe Non AC">
+                    </div>
+                    <button class="carousel-btn prev" onclick="slideCarousel('carousel-deluxe-nonac', -1)"><svg
+                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg></button>
+                    <button class="carousel-btn next" onclick="slideCarousel('carousel-deluxe-nonac', 1)"><svg
+                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide('carousel-deluxe-nonac', 0)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-deluxe-nonac', 1)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-deluxe-nonac', 2)"></span>
+                    </div>
+                </div>
+                <div class="room-body"><span class="room-badge" style="background:var(--gold);">DELUXE
+                        NON AC</span>
+                    <div class="room-amenities"><span class="amenity-pill">Free WiFi</span><span
+                            class="amenity-pill">TV</span><span class="amenity-pill">Geyser</span><span
+                            class="amenity-pill">Power Backup</span></div>
+                    <p class="room-desc">A spacious,
+                        well-appointed room with a touch of luxury — ideal for those who prefer a cooler
+                        natural breeze.</p>
+                    <div class="room-price" style="color:var(--gold);">From ₹1,200 / night</div><button
+                        class="btn-red open-modal">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-carousel" id="carousel-deluxe-ac">
+                    <div class="carousel-track" onclick="openLightbox('carousel-deluxe-ac')">
+                        <img src="gallery/all pictures/1500 rupees room/09176b7d-9e67-4045-9d32-d943f6fcdbd6.jpg"
+                            alt="Deluxe AC" onerror="this.src=''; this.style.background='#f0ebe3';">
+                        <img src="gallery/all pictures/1500 rupees room/74e7574f-f4a5-4386-8da0-0d33229cd8c5.jpg"
+                            alt="Deluxe AC">
+                        <img src="gallery/all pictures/1500 rupees room/c48bb799-3689-4de6-b25e-dee5781cebf8.jpg"
+                            alt="Deluxe AC">
+                    </div>
+                    <button class="carousel-btn prev" onclick="slideCarousel('carousel-deluxe-ac', -1)"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg></button>
+                    <button class="carousel-btn next" onclick="slideCarousel('carousel-deluxe-ac', 1)"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide('carousel-deluxe-ac', 0)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-deluxe-ac', 1)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-deluxe-ac', 2)"></span>
+                    </div>
+                </div>
+                <div class="room-body"><span class="room-badge" style="background:var(--red);">DELUXE AC</span>
+                    <div class="room-amenities"><span class="amenity-pill">AC</span><span
+                            class="amenity-pill">TV</span><span class="amenity-pill">Geyser</span><span
+                            class="amenity-pill">Free
+                            WiFi</span><span class="amenity-pill">Power Backup</span></div>
+                    <p class="room-desc">A premium air-conditioned room with TV and all essentials —
+                        the perfect balance of comfort and value.</p>
+                    <div class="room-price" style="color:var(--gold);">From ₹1,500 / night</div><button
+                        class="btn-red open-modal">Book This Room</button>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="ribbon">Most Popular</div>
+                <div class="room-carousel" id="carousel-grand-suite">
+                    <div class="carousel-track" onclick="openLightbox('carousel-grand-suite')">
+                        <img src="gallery/all pictures/1800 rupees room/f5465d86-d2be-40a7-983a-c5ecceab5a5b.jpg"
+                            alt="Grand Suite" onerror="this.src=''; this.style.background='#f0ebe3';">
+                        <img src="gallery/all pictures/1800 rupees room/669a3854-86b9-4d51-bd53-2e8d9da83be7.jpg"
+                            alt="Grand Suite">
+                        <img src="gallery/all pictures/1800 rupees room/6221a93f-64cb-4033-91e4-e5f6a07ad132.jpg"
+                            alt="Grand Suite">
+                    </div>
+                    <button class="carousel-btn prev" onclick="slideCarousel('carousel-grand-suite', -1)"><svg
+                            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg></button>
+                    <button class="carousel-btn next" onclick="slideCarousel('carousel-grand-suite', 1)"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="goToSlide('carousel-grand-suite', 0)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-grand-suite', 1)"></span>
+                        <span class="dot" onclick="goToSlide('carousel-grand-suite', 2)"></span>
+                    </div>
+                </div>
+                <div class="room-body"><span class="room-badge" style="background:#7A0E0E;">✦
+                        GRAND SUITE</span>
+                    <div class="room-amenities"><span class="amenity-pill">AC</span><span
+                            class="amenity-pill">TV</span><span class="amenity-pill">Geyser</span><span
+                            class="amenity-pill">Room
+                            Service</span></div>
+                    <p class="room-desc">Our finest room — spacious,
+                        elegantly furnished,
+                        and equipped with every amenity for a truly indulgent stay.</p>
+                    <div class="room-price">From ₹1,800 / night</div><button class="btn-red open-modal"
+                        style="background:#7A0E0E;">Book This Room</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="amenities" class="container">
+        <div class="rooms-header">
+            <div class="pill-label">EVERYTHING YOU NEED</div>
+            <h2
+                style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:44px; margin-bottom:8px; text-shadow: 0 0 40px rgba(201,149,42,0.12);">
+                Premium Amenities</h2>
+            <p style="text-align:center; color:var(--muted); font-size:15px; margin-bottom:48px;">Everything you need
+                for a comfortable stay</p>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--red);">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <line x1="12" y1="20" x2="12.01" y2="20" />
+                </svg>
+                <h3>Free WiFi</h3>
+                <p>High speed internet throughout the property</p>
+            </div>
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--gold);">
+                    <line x1="12" y1="2" x2="12" y2="22" />
+                    <line x1="20" y1="12" x2="4" y2="12" />
+                    <line x1="17.66" y1="17.66" x2="6.34" y2="6.34" />
+                    <line x1="17.66" y1="6.34" x2="6.34" y2="17.66" />
+                </svg>
+                <h3>Air Conditioning</h3>
+                <p>Stay cool with individual AC controls</p>
+            </div>
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--red);">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                <h3>Smart TV</h3>
+                <p>Entertainment in every room</p>
+            </div>
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--gold);">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+                <h3>Hot Geyser</h3>
+                <p>Hot water available round the clock</p>
+            </div>
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--red);">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                <h3>Power Backup</h3>
+                <p>Uninterrupted power supply always</p>
+            </div>
+            <div class="amenity-card"><svg viewBox="0 0 24 24" style="color:var(--gold);">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <h3>24/7 Front Desk</h3>
+                <p>Always here to help you</p>
+            </div>
+            <div class="amenity-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9952A" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:24px;">
+                    <rect x="1" y="3" width="15" height="13" rx="2" />
+                    <path d="M16 8h4l3 3v5h-7V8z" />
+                    <circle cx="5.5" cy="18.5" r="2.5" />
+                    <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+                <h3>Car Parking</h3>
+                <p>Spacious parking available for 10 or more vehicles on the premises</p>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" style="padding:80px 0; background:var(--surface-2); overflow:hidden;">
+        <div style="text-align:center; margin-bottom:48px; padding:0 24px;"><span class="pill-label">GUEST
+                REVIEWS</span>
+            <h2 style="font-family:'Cormorant Garamond',serif; font-size:42px; margin-top:8px;">What Our Guests
+                Say</h2>
+            <p style="color:var(--muted); margin-top:8px; font-size:15px;">Real experiences from real guests —
+                verified on OYO</p>
+            <div
+                style="display:inline-flex; align-items:center; gap:14px; background:var(--surface); border:1px solid var(--border); border-radius:50px; padding:12px 28px; margin-top:16px;">
+                <span
+                    style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:700; color:var(--gold); line-height:1;">4.9</span>
+                <div>
+                    <div style="display:flex; gap:3px; margin-bottom:4px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <p style="font-size:12px; color:var(--muted); font-family:'Inter',sans-serif;">Based on 20+ reviews
+                        · OYO</p>
+                </div>
+            </div>
+        </div>
+        <!-- 3-column infinite scroll -->
+        <div class="reviews-stage">
+            <div class="reviews-col col-up">
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Very clean rooms and the staff was extremely welcoming. Felt
+                        like home from the moment I arrived. Will definitely return on my next trip to
+                        Dibrugarh." </div>
+                    <div class="review-author">Dipanjali Bora</div>
+                    <div class="review-meta">April 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Breakfast was delicious and home cooked. The owner personally
+                        came and checked on us. Rare hospitality these days." </div>
+                    <div class="review-author">Bikky Sonar</div>
+                    <div class="review-meta">April 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Good value for money. AC was working perfectly and the bed
+                        was comfortable. Location is convenient for the bypass road." </div>
+                    <div class="review-author">Ranjit Gogoi</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Everything good. Good staff. Room was neat and tidy. Would
+                        recommend to anyone visiting Dibrugarh." </div>
+                    <div class="review-author">Vijay Kumar</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Stayed for 3 nights for a business trip. The front desk was
+                        available every time I needed help. Power backup ensured no interruptions." </div>
+                    <div class="review-author">Pranjal Saikia</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Very clean rooms and the staff was extremely welcoming. Felt
+                        like home from the moment I arrived. Will definitely return on my next trip to
+                        Dibrugarh." </div>
+                    <div class="review-author">Dipanjali Bora</div>
+                    <div class="review-meta">April 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Breakfast was delicious and home cooked. The owner personally
+                        came and checked on us. Rare hospitality these days." </div>
+                    <div class="review-author">Bikky Sonar</div>
+                    <div class="review-meta">April 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Good value for money. AC was working perfectly and the bed
+                        was comfortable. Location is convenient for the bypass road." </div>
+                    <div class="review-author">Ranjit Gogoi</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Everything good. Good staff. Room was neat and tidy. Would
+                        recommend to anyone visiting Dibrugarh." </div>
+                    <div class="review-author">Vijay Kumar</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Stayed for 3 nights for a business trip. The front desk was
+                        available every time I needed help. Power backup ensured no interruptions." </div>
+                    <div class="review-author">Pranjal Saikia</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+            </div>
+            <div class="reviews-col col-down">
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"The 2BHK homestay unit was spacious and perfect for our
+                        family of four. Kids loved the food. Will book again." </div>
+                    <div class="review-author">Mridula Hazarika</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Comfortable stay at a very fair price. The Deluxe AC room was
+                        well maintained and the geyser worked great in the cold morning." </div>
+                    <div class="review-author">Nayan Dutta</div>
+                    <div class="review-meta">December 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Superb hospitality. The staff went out of their way to make
+                        us feel comfortable. The restaurant food especially the dal and rice was
+                        outstanding." </div>
+                    <div class="review-author">Ankita Baruah</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Clean, safe and quiet location. Good for solo travellers.
+                        WiFi was fast and the room was well lit. Satisfied with the stay." </div>
+                    <div class="review-author">Subham Kalita</div>
+                    <div class="review-meta">November 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Checked in late at night and the staff was still awake and
+                        very helpful. True 24 hour service. Rooms were spotless." </div>
+                    <div class="review-author">Garima Phukan</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"The 2BHK homestay unit was spacious and perfect for our
+                        family of four. Kids loved the food. Will book again." </div>
+                    <div class="review-author">Mridula Hazarika</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Comfortable stay at a very fair price. The Deluxe AC room was
+                        well maintained and the geyser worked great in the cold morning." </div>
+                    <div class="review-author">Nayan Dutta</div>
+                    <div class="review-meta">December 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Superb hospitality. The staff went out of their way to make
+                        us feel comfortable. The restaurant food especially the dal and rice was
+                        outstanding." </div>
+                    <div class="review-author">Ankita Baruah</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Clean, safe and quiet location. Good for solo travellers.
+                        WiFi was fast and the room was well lit. Satisfied with the stay." </div>
+                    <div class="review-author">Subham Kalita</div>
+                    <div class="review-meta">November 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Checked in late at night and the staff was still awake and
+                        very helpful. True 24 hour service. Rooms were spotless." </div>
+                    <div class="review-author">Garima Phukan</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+            </div>
+            <div class="reviews-col col-up">
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"The Grand Suite was worth every rupee. Spacious, clean, great
+                        AC, and the best sleep I have had in any hotel in Assam." </div>
+                    <div class="review-author">Hemanta Rajbongshi</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Decent hotel near the bypass. Helpful management. Breakfast
+                        was included and very filling. Good choice for budget travellers." </div>
+                    <div class="review-author">Pallabi Nath</div>
+                    <div class="review-meta">October 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Came with my parents for a family function. The homestay unit
+                        was perfect with separate rooms and a kitchen. Felt like our own house." </div>
+                    <div class="review-author">Rituraj Bordoloi</div>
+                    <div class="review-meta">December 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Good location and friendly staff. The room was clean and AC
+                        worked well. Would suggest adding some local Assamese decor for more charm." </div>
+                    <div class="review-author">Barnali Choudhury</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"One of the best budget stays in Dibrugarh. Honest pricing,
+                        genuine hospitality, and tasty food. The owner is very courteous and attentive."
+                    </div>
+                    <div class="review-author">Deepak Boruah</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"The Grand Suite was worth every rupee. Spacious, clean, great
+                        AC, and the best sleep I have had in any hotel in Assam." </div>
+                    <div class="review-author">Hemanta Rajbongshi</div>
+                    <div class="review-meta">March 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Decent hotel near the bypass. Helpful management. Breakfast
+                        was included and very filling. Good choice for budget travellers." </div>
+                    <div class="review-author">Pallabi Nath</div>
+                    <div class="review-meta">October 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Came with my parents for a family function. The homestay unit
+                        was perfect with separate rooms and a kitchen. Felt like our own house." </div>
+                    <div class="review-author">Rituraj Bordoloi</div>
+                    <div class="review-meta">December 2024</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"Good location and friendly staff. The room was clean and AC
+                        worked well. Would suggest adding some local Assamese decor for more charm." </div>
+                    <div class="review-author">Barnali Choudhury</div>
+                    <div class="review-meta">January 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#C9952A">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
+                    <div class="review-quote">"One of the best budget stays in Dibrugarh. Honest pricing,
+                        genuine hospitality, and tasty food. The owner is very courteous and attentive."
+                    </div>
+                    <div class="review-author">Deepak Boruah</div>
+                    <div class="review-meta">February 2025</div><span class="review-source">Verified on
+                        OYO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="policies">
+        <div class="container">
+            <div class="rooms-header">
+                <div class="pill-label">HOTEL POLICIES</div>
+                <h2 style="text-shadow: 0 0 40px rgba(201,149,42,0.12);">Good to Know Before You Stay</h2>
+            </div>
+            <div class="policies-grid">
+                <div class="policy-card red">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>House Rules </h3>
+                    <ul class="policy-list">
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Check-in: 12:00 PM | Check-out: 11:00 AM </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Valid government-issued ID required at check-in </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Couples are welcome (local and outstation guests) </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Pets are welcome on the property </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Children of any age are welcome </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Children up to 5 years stay free on existing beds </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Outside food and alcohol allowed in rooms responsibly </li>
+                        <li class="policy-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>Please maintain noise levels after 10:00 PM </li>
+                    </ul>
+                </div>
+                <div class="policy-card gold">
+                    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>Important Notes </h3>
+                    <ul class="policy-list">
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>PAN card is not accepted as ID proof </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Early check-in and late check-out subject to availability </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Rooms are non-smoking — smoking permitted in designated areas </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Kindly inform the front desk of special requests </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Hotel not responsible for unattended valuables </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Power backup available during outages </li>
+                        <li class="policy-item"><svg width="8" height="8" viewBox="0 0 8 8"
+                                style="flex-shrink:0;margin-top:5px;">
+                                <circle cx="4" cy="4" r="4" fill="#C9952A" />
+                            </svg>Management reserves right to refuse service </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="location" class="container">
+        <div class="rooms-header">
+            <div class="pill-label">FIND US</div>
+            <h2 style="text-shadow: 0 0 40px rgba(201,149,42,0.12);">Our Location</h2>
+        </div>
+        <div class="location-grid">
+            <div class="location-info">
+                <div class="location-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <p>House No 100,
+                        Pub Banipur,
+                        Kunjaban Path,
+                        Near Pub Banipur Masjid,
+                        Dibrugarh Bypass Road,
+                        Dibrugarh,
+                        Assam 786003</p>
+                </div>
+                <div class="location-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <p>Check In: 12:00 PM · Check Out: 11:00 AM</p>
+                </div>
+                <div class="location-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3.5s-2.5 0-4 1.5L13.5 8.5l-8.2-1.8c-.9-.2-1.8.1-2.4.7l-.4.4 7.5 4.5-3.3 3.3-2.1-.7c-.5-.2-1 0-1.4.4l-.2.2 2.8 2.8 2.8 2.8.2-.2c.4-.4.5-.9.4-1.4l-.7-2.1 3.3-3.3 4.5 7.5.4-.4c.6-.6.9-1.5.7-2.4z" />
+                    </svg>
+                    <p>Dibrugarh Airport: 9 km away</p>
+                </div>
+                <div class="location-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                    <p>Couples Welcome and Pet Friendly</p>
+                </div><a href="https://maps.google.com/?q=Kunjaban+Path+Dibrugarh+Assam+786003" target="_blank"
+                    class="btn-gold-outline">Get Directions</a>
+            </div><iframe src="https://maps.google.com/maps?q=26.4890,94.9028&z=15&output=embed"
+                loading="lazy"></iframe>
+        </div>
+    </section>
+    <section class="container cta-section">
+        <div class="cta-banner">
+            <div class="cta-content">
+                <div class="pill-label"
+                    style="background:rgba(255,255,255,0.15); color:#FFF; border:none; margin-bottom:20px;">
+                    DIRECT BOOKING</div>
+                <h2>Ready for a Comfortable Stay?</h2>
+                <p>Book directly and enjoy the best available rates. No hidden charges. We are available 24
+                    hours a day. </p>
+                <div class="trust-badges"><span class="trust-badge"><svg width="12" height="12" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px;">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>Best Rate Guarantee </span><span class="trust-badge"><svg width="12" height="12"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px;">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>Free Cancellation </span><span class="trust-badge"><svg width="12" height="12"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-2px;">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>Instant Confirmation </span></div>
+                <div class="cta-btns"><button class="btn-white open-modal"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>Call to Book </button><a href="https://wa.me/911234567890" target="_blank"
+                        class="btn-wa-cta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>WhatsApp Us </a></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="#" class="logo">THE MAHALAXMI INN</a>
+                    <p>Warm Hospitality in the Heart of Dibrugarh. Experience comfort and elegance.</p>
+                </div>
+                <div class="footer-col" style="margin-left:auto;">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links"><a href="#rooms">Our Rooms</a><a href="#restaurant">Restaurant</a><a
+                            href="#homestay">Homestay</a><a href="#amenities">Amenities</a><a
+                            href="#reviews">Reviews</a><a href="#location">Find Us</a></div>
+                </div>
+                <div class="footer-col" style="margin-left:auto;">
+                    <h4>Contact Info</h4>
+                    <div class="footer-links">
+                        <div
+                            style="display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted);font-size:14px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B22222"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                            </svg><span>+91 12345 67890</span>
+                        </div>
+                        <div
+                            style="display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted);font-size:14px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B22222"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg><span>info@mahalaxmiinn.com</span>
+                        </div>
+                        <div style="display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:14px;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B22222"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="flex-shrink:0;margin-top:2px;">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg><span>Dibrugarh, Assam 786003</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    2025 The Mahalaxmi Inn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="bookModal">
+        <div class="modal"><button class="close-modal" id="closeModal"><svg width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg></button>
+            <h2>Book Your Stay</h2>
+            <form id="bookForm">
+                <div class="form-group"><label>Full Name</label><input type="text" name="name" placeholder="John Doe"
+                        required></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" name="phone"
+                        placeholder="+91 00000 00000" required></div>
+                <div class="form-group"><label>Room Type</label><select name="room_type" required>
+                        <option value="Standard">Standard Room (₹1,000)</option>
+                        <option value="Deluxe Non AC">Deluxe Non AC (₹1,200)</option>
+                        <option value="Deluxe AC">Deluxe AC (₹1,500)</option>
+                        <option value="Grand Suite">Grand Suite (₹1,800)</option>
+                    </select></div>
+                <div class="form-row">
+                    <div class="form-group"><label>Check In</label><input type="date" name="checkin" required>
+                    </div>
+                    <div class="form-group"><label>Check Out</label><input type="date" name="checkout" required>
+                    </div>
+                </div>
+                <div class="form-group"><label>Guests</label><input type="number" name="guests" value="1" min="1"
+                        required></div>
+                <div class="modal-btns"><button type="submit" class="btn-wa"><svg width="20" height="20"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12.031 2c-5.516 0-9.988 4.473-9.988 9.989 0 1.763.459 3.479 1.332 5l-1.413 5.161 5.281-1.386a9.948 9.948 0 0 0 4.788 1.222l.004-.001c5.514 0 9.985-4.472 9.985-9.987 0-2.67-1.037-5.18-2.92-7.063s-4.394-2.925-7.069-2.925zm5.558 13.905c-.24.676-1.4 1.238-1.921 1.319-.519.083-1.042.13-2.956-.632-2.449-.974-4.019-3.447-4.14-3.609-.122-.161-1.002-1.334-1.002-2.546 0-1.211.631-1.808.855-2.049.223-.242.483-.303.643-.303.161 0 .321.002.46.009.146.007.34-.055.534.41.194.466.666 1.614.723 1.729.057.114.095.247.02.4-.076.152-.113.262-.224.394-.111.132-.234.294-.334.394-.109.109-.224.229-.096.449.128.22 1.2 1.96 2.035 2.704.66.589 1.217.781 1.458.892.24.112.381.092.521-.069s.599-.7 0-1.442-.482-.622-.601-.863-.039-.452.028-.59.294-.294.521-.49c.228-.196 1.055-.497 1.238-.59s.305-.152.422-.09c.117.062.744.351 1.547.75.803.399 1.33.655 1.516.963z" />
+                        </svg>WhatsApp Us </button><a href="tel:+911234567890" class="btn-call"><svg width="20"
+                            height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>Call Now </a></div>
+            </form>
+        </div>
+    </div>
+    <script>
+
+        const carouselState = {};
+
+        function slideCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            if (!carousel) return;
+            const track = carousel.querySelector('.carousel-track');
+            const dots = carousel.querySelectorAll('.dot');
+            const total = track.children.length;
+            if (!carouselState[id]) carouselState[id] = 0;
+            carouselState[id] = (carouselState[id] + direction + total) % total;
+            track.style.transform = 'translateX(-' + (carouselState[id] * 100) + '%)';
+            dots.forEach((d, i) => d.classList.toggle('active', i === carouselState[id]));
+        }
+
+        function goToSlide(id, index) {
+            const carousel = document.getElementById(id);
+            if (!carousel) return;
+            const track = carousel.querySelector('.carousel-track');
+            const dots = carousel.querySelectorAll('.dot');
+            carouselState[id] = index;
+            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+
+
+        let lbImages = [];
+        let lbIndex = 0;
+
+        function openLightbox(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            const imgs = carousel.querySelectorAll('.carousel-track img');
+            lbImages = Array.from(imgs).map(img => img.src).filter(src => src && !src.endsWith('/'));
+            if (!lbImages.length) return;
+            lbIndex = carouselState[carouselId] || 0;
+            updateLightbox();
+            const lb = document.getElementById('lightbox');
+            lb.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateLightbox() {
+            document.getElementById('lightbox-img').src = lbImages[lbIndex];
+            document.getElementById('lb-counter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+        }
+
+        function lbSlide(dir) {
+            lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+            updateLightbox();
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (lb && lb.style.display === 'flex') {
+                if (e.key === 'ArrowRight') lbSlide(1);
+                if (e.key === 'ArrowLeft') lbSlide(-1);
+                if (e.key === 'Escape') closeLightbox();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Theme Toggle
+            const themeBtn = document.getElementById('themeToggle');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('night');
+                    const isNight = document.documentElement.classList.contains('night');
+
+                    // Swap hero image with fade
+                    const heroImg = document.getElementById('hero-img');
+                    if (heroImg) {
+                        heroImg.style.opacity = '0';
+                        setTimeout(() => {
+                            heroImg.src = isNight
+                                ? 'gallery/day and night picture/night.jpg'
+                                : 'gallery/day and night picture/day.jpg';
+                            heroImg.onload = () => { heroImg.style.opacity = '1'; };
+                            setTimeout(() => { heroImg.style.opacity = '1'; }, 300);
+                        }, 400);
+                    }
+
+                    // Update tooltip
+                    document.getElementById('themeToggle').title = isNight
+                        ? 'Switch to day view'
+                        : 'Switch to night view';
+                });
+            }
+
+            // Mobile Menu Morphing logic
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('#mobileMenu .nav-link');
+
+            function toggleMenu() {
+                if (menuToggle && mobileMenu) {
+                    menuToggle.classList.toggle('active');
+                    mobileMenu.classList.toggle('open');
+                    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : 'auto';
+                }
+            }
+
+            if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+            if (mobileLinks.length > 0) mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // Navbar Scroll Visibility
+            const nav = document.querySelector('nav');
+            let lastScrollY = 0;
+
+            if (nav) {
+                window.addEventListener('scroll', () => {
+                    const currentY = window.scrollY;
+
+                    // Scrolled state (more opaque)
+                    if (currentY > 40) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+
+                    // Hide on scroll down, show on scroll up
+                    if (currentY > lastScrollY && currentY > 120) {
+                        nav.style.transform = 'translateX(-50%) translateY(-120%)';
+                        nav.style.opacity = '0';
+                    } else {
+                        nav.style.transform = 'translateX(-50%) translateY(0)';
+                        nav.style.opacity = '1';
+                    }
+
+                    lastScrollY = currentY;
+                });
+            }
+
+            // Modal Logic
+            const modalOverlay = document.getElementById('bookModal');
+            const openModalButtons = document.querySelectorAll('.open-modal');
+            const closeModalButton = document.getElementById('closeModal');
+            const bookForm = document.getElementById('bookForm');
+
+            function openModal(roomType = "") {
+                if (!modalOverlay) return;
+                if (roomType && bookForm) {
+                    const select = bookForm.querySelector('select[name="room_type"]');
+                    if (select) select.value = roomType;
+                }
+
+                modalOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                if (!modalOverlay) return;
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            if (openModalButtons.length > 0) {
+                openModalButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const card = e.target.closest('.room-card');
+                        let roomName = "";
+                        if (card) {
+                            const img = card.querySelector('img');
+                            if (img) roomName = img.alt;
+                        }
+                        openModal(roomName);
+                    });
+                });
+            }
+
+            if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
+
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', (e) => {
+                    if (e.target === modalOverlay) closeModal();
+                });
+            }
+
+            // Form Submit to WhatsApp
+            if (bookForm) {
+                bookForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const fd = new FormData(bookForm);
+
+                    const text = `Hi ! I'd like to book a stay at The Mahalaxmi Inn.
+ Name: ${fd.get('name')}
+ Phone: ${fd.get('phone')}
+ Room: ${fd.get('room_type')}
+ Check-in: ${fd.get('checkin')}
+ Check-out: ${fd.get('checkout')}
+ Guests: ${fd.get('guests')}
+ `;
+
+                    const encoded = encodeURIComponent(text);
+                    window.open(`https://wa.me/911234567890?text=${encoded}`, '_blank');
+                    closeModal();
+                });
+            }
+
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('section-visible');
+                        e.target.classList.remove('section-hidden');
+                        observer.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            const sections = document.querySelectorAll('section');
+            if (sections.length > 0) {
+                sections.forEach(s => {
+                    s.classList.add('section-hidden');
+                    observer.observe(s);
+                });
+            }
+
+            // Fallback timeout in case observer fails to paint
+            setTimeout(() => {
+                document.querySelectorAll('.section-hidden').forEach(s => {
+                    s.classList.add('section-visible');
+                    s.classList.remove('section-hidden');
+                });
+            }, 2000);
+
+            // Smooth Scroll
+            const smoothLinks = document.querySelectorAll('a[href^="#"]');
+            if (smoothLinks.length > 0) {
+                smoothLinks.forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        const target = document.querySelector(targetId);
+
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="closeLightbox()" style="
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.92);
+      z-index:9999;
+      align-items:center;
+      justify-content:center;
+      cursor:zoom-out;
+      padding:20px;
+    ">
+        <!-- Close button -->
+        <button onclick="closeLightbox()" style="
+        position:absolute;
+        top:20px;
+        right:24px;
+        background:none;
+        border:none;
+        cursor:pointer;
+        z-index:10000;
+      ">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+        <!-- Prev -->
+        <button id="lb-prev" onclick="event.stopPropagation(); lbSlide(-1)" style="
+        position:absolute;
+        left:20px;
+        top:50%;
+        transform:translateY(-50%);
+        background:rgba(255,255,255,0.15);
+        border:none;
+        border-radius:50%;
+        width:50px;
+        height:50px;
+        cursor:pointer;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <!-- Image -->
+        <img id="lightbox-img" src="" alt="" style="
+        max-width:90vw;
+        max-height:88vh;
+        object-fit:contain;
+        border-radius:8px;
+        box-shadow:0 8px 48px rgba(0,0,0,0.6);
+        display:block;
+      ">
+        <!-- Next -->
+        <button id="lb-next" onclick="event.stopPropagation(); lbSlide(1)" style="
+        position:absolute;
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+        background:rgba(255,255,255,0.15);
+        border:none;
+        border-radius:50%;
+        width:50px;
+        height:50px;
+        cursor:pointer;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+        <!-- Counter -->
+        <div id="lb-counter" style="
+        position:absolute;
+        bottom:24px;
+        left:50%;
+        transform:translateX(-50%);
+        color:rgba(255,255,255,0.7);
+        font-family:'Inter',sans-serif;
+        font-size:13px;
+        letter-spacing:0.06em;
+      "></div>
+    </div>
+
+</body>
+
+</html>

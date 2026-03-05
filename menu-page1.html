@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mahalaxmi Rasoi Menu | The Mahalaxmi Inn</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B1010",
+                        secondary: "#C9952A",
+                        "background-light": "#FAF6EE",
+                        "background-dark": "#1a1610",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Cormorant Garamond", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .dotted-leader {
+            border-bottom: 2px dotted #C9952A;
+            flex-grow: 1;
+            margin: 0 10px;
+            opacity: 0.6;
+            position: relative;
+            top: -6px;
+        }
+
+        .gold-border {
+            border-color: #C9952A;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-btn.active {
+            background: #8B1010;
+            color: white;
+        }
+
+        body {
+            background-color: #FAF6EE;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-body text-[#2c241b] min-h-screen py-10 px-4">
+
+    <!-- Back link -->
+    <div class="max-w-[900px] mx-auto mb-4 no-print">
+        <a href="index.html"
+            style="color:#8B1010; font-family:'Cormorant Garamond',serif; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+            <span class="material-icons" style="font-size:18px;">arrow_back</span> Back to The Mahalaxmi Inn
+        </a>
+    </div>
+
+    <!-- Menu card -->
+    <div class="max-w-[900px] mx-auto relative p-8 md:p-12 shadow-2xl bg-white border-2 gold-border rounded">
+        <!-- Corner accents -->
+        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 gold-border -ml-2 -mt-2"></div>
+        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 gold-border -mr-2 -mt-2"></div>
+        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 gold-border -ml-2 -mb-2"></div>
+        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 gold-border -mr-2 -mb-2"></div>
+
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <span class="material-icons text-4xl mb-2" style="color:#C9952A;">restaurant</span>
+            <h1 class="font-display text-5xl md:text-6xl font-bold tracking-wider uppercase mb-2"
+                style="color:#8B1010;">Mahalaxmi Rasoi</h1>
+            <p class="text-xl md:text-2xl italic mb-3" style="color:#C9952A;">The Flavours of Assam</p>
+            <div class="text-sm tracking-wide opacity-75">
+                <p>Nizarapar, Near T.V. Centre, Dibrugarh, Assam</p>
+                <p>For Orders: +91 9365518001 / +91 6000085816</p>
+            </div>
+        </header>
+
+        <!-- Tab navigation -->
+        <nav class="flex flex-wrap justify-center gap-3 mb-10 no-print">
+            <button id="tab-breakfast"
+                class="tab-btn active px-6 py-2 rounded-full border gold-border font-semibold transition-all"
+                onclick="showTab('breakfast')">Breakfast &amp; Beverages</button>
+            <button id="tab-starters"
+                class="tab-btn px-6 py-2 rounded-full border gold-border font-semibold transition-all"
+                style="color:#8B1010;" onclick="showTab('starters')">Starters &amp; Salads</button>
+        </nav>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- TAB 1: BREAKFAST & BEVERAGES          -->
+        <!-- ══════════════════════════════════════ -->
+        <div id="content-breakfast" class="tab-content active">
+            <!-- Food photo grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="relative group rounded overflow-hidden border gold-border shadow-md aspect-[4/3]">
+                    <img alt="Paratha" class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWpG1whEH9hec4V_m_WE1ZiIKMKpAY9JvmdE1moug0seGkxm0RLEGFqBQmb9-bp5v0vl0d6tW-fETYUBzf5QU1bztTsnRtvWzSaLDgPSpZK5Y-LQiCVBIu7t3poo0nb2TcJePFK-fpb08iaiei0NIpxmTuWVQhiY8HY8sNY54QhzyHZIUz9YaKoMWEPKpo9ZzwQzn7ZP-UwIoneQKzT3GRrRsmkXBuSogYJ2ApPt9Tf_LdtjU8QsZ3eFyaUSaxm1M0HUYRprsA2hE" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-2"><span
+                            class="text-white font-semibold text-sm">Paratha</span></div>
+                </div>
+                <div class="relative group rounded overflow-hidden border gold-border shadow-md aspect-[4/3]">
+                    <img alt="Chole Bhature"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK4ujm1zH3XvHCo62ZnbLNr_pEfl4VLPlCHNevezCZXPBDfXVnxXU6vYuZdl09GGugDoCLXeKl67wkn66r3J0-6eTSd9VFN4aH8Z7Nj63gkP-VH9sMw9OuXabKTNZs0zfBIUX9Ch_b62-r_qcfE9Vy2wiKVkugi8uwx921PyOwvyH_CZVtTlPIsR5Q5xHk1SE5XuGuV-gD7ivFdMlYyQJKa3LcrXcwCE6Yz27vrn9FYn9WU-1zISxI7VdzjsuaCCNyL4zXLq3WYos" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-2"><span
+                            class="text-white font-semibold text-sm">Chole Bhature</span></div>
+                </div>
+                <div class="relative group rounded overflow-hidden border gold-border shadow-md aspect-[4/3]">
+                    <img alt="Bread Omelette"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcW9_wlrmnreb26ZQfpCDAzVQzp-Wgiw4gupQtfk2_oZqb3yhHrtS454MzHe_Z5kdI_xoaBbrgHqgvY1xfUiNzfZvnsJL1BagPvf_tqxP7uW7nXndVxZ1e8nP2-Zaz_gDwaHyrl-DPV1sqhLdBcJBLP0wWGU6gvC1-KVfc6YpebqjWx6xbV5Cxj3N-clpH6lpTMV0j3q7Fzmzx4Zqwpnjg0e0VjgafoxCZzUFOQPYHGSf6rDVm84FnmHyzVEwtbItRwfjxzqNmo1Y" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-2"><span
+                            class="text-white font-semibold text-sm">Bread Omelette</span></div>
+                </div>
+                <div class="relative group rounded overflow-hidden border gold-border shadow-md aspect-[4/3]">
+                    <img alt="Tea and Coffee"
+                        class="w-full h-full object-cover transition-transform group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsNHZr8OvPCrNBDGH2nvw3yNXiGREfR-JMu-iSgCto-rBvBas-GUPC_7GDcuOwpqZGx0Zjsm-CFXeZs4VVOaGJy9Ti1jy5tbdP6Oq5NPUvuy3SUxbPmGDojeKe15fCS2OGZ6FPiNeSDEVCPb-lM2GzrKVUnfnX9h6D70RaaMJzY6VUBlYDBaT7dX89qeOS8Q6tpxnvrkTJLBNg5GFNfhqjeZ5bND3-2KIGWPBHimNBzKIc6bUgdXSYBJsgt204Z705vwyovoTH2V8" />
+                    <div class="absolute inset-0 bg-black/40 flex items-end p-2"><span
+                            class="text-white font-semibold text-sm">Tea &amp; Coffee</span></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 space-y-10">
+                    <!-- Breakfast -->
+                    <section>
+                        <h2 class="font-display text-3xl font-bold mb-6 border-b-2 gold-border pb-2 inline-block"
+                            style="color:#8B1010;">BREAKFAST</h2>
+                        <div class="space-y-4 text-lg">
+                            <div class="flex items-baseline"><span class="font-semibold">Paratha
+                                    (Aloo/Paneer/Gobi)</span><span class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹80</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Puri Sabji (4 Pcs)</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹100</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Chole Bhature</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹120</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Bread Toast (4
+                                    Slices)</span><span class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹60</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Bread Omelette</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹80</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Maggi / Wai Wai</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹60</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Poha</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹80</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Upma</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹80</span></div>
+                        </div>
+                    </section>
+                    <!-- Beverages -->
+                    <section>
+                        <h2 class="font-display text-3xl font-bold mb-6 border-b-2 gold-border pb-2 inline-block"
+                            style="color:#8B1010;">BEVERAGES</h2>
+                        <div class="space-y-4 text-lg">
+                            <div class="flex items-baseline"><span class="font-semibold">Tea (Milk / Black /
+                                    Lemon)</span><span class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹30</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Coffee</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹50</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Fresh Juice
+                                    (Seasonal)</span><span class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹80</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Lassi (Sweet /
+                                    Salted)</span><span class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹70</span></div>
+                            <div class="flex items-baseline"><span class="font-semibold">Cold Coffee</span><span
+                                    class="dotted-leader"></span><span class="font-bold"
+                                    style="color:#8B1010;">₹90</span></div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <div class="border-2 gold-border p-6 rounded text-center bg-[#FAF6EE] shadow-sm">
+                        <span class="material-icons text-4xl mb-4" style="color:#8B1010;">local_cafe</span>
+                        <h3 class="font-display text-xl font-bold mb-2" style="color:#8B1010;">A Perfect Start</h3>
+                        <p class="italic text-sm opacity-90">"Discover the perfect balance of traditional spices and
+                            fresh ingredients to begin your day. Crafted with love and heritage."</p>
+                    </div>
+                    <div class="p-6 rounded shadow-md text-center text-white" style="background:#8B1010;">
+                        <span class="material-icons text-3xl mb-2" style="color:#C9952A;">restaurant_menu</span>
+                        <h3 class="font-display text-xl font-bold mb-2">MEAL PLAN AVAILABLE</h3>
+                        <p class="text-sm opacity-90 mb-4">Ask our staff about our daily, weekly, and monthly meal plans
+                            tailored to your needs.</p>
+                        <a href="tel:+919365518001"
+                            class="inline-block px-4 py-2 bg-white text-sm font-bold rounded shadow transition-colors"
+                            style="color:#8B1010;">Call to Enquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- TAB 2: STARTERS & SALADS              -->
+        <!-- ══════════════════════════════════════ -->
+        <div id="content-starters" class="tab-content">
+            <!-- Food photo grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="relative group overflow-hidden rounded-lg border gold-border p-1">
+                    <img alt="Samosa with chutney"
+                        class="w-full h-32 object-cover rounded shadow-sm group-hover:scale-105 transition-transform duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIYM-aoCDmYFPzKaBQF5SWBTV6OQ8yvP7KWA9L2t2ynFJfvOCjqWrVziN4Q2onY9htwKjOu4auE4yq63ndd43CNsSlsCbTncE7orlWNqAqdnNT-niDHl3gGUtLMsp4i1E1Na5IPx9l1ZJltG5UOZFBKR4jDQlXySUQR2Tao9Mja4VT1I2SJES8Q98e0ZP3xEGJbQmUFAvcCGB0VLOQ1z8gI9Vze-aFD6gObAcJTGeb6VJNarV_CW3Ph5wMOb_aNlr8N-N2ZDlZJ8" />
+                    <div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 text-xs font-bold rounded">Samosa</div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border gold-border p-1">
+                    <img alt="Chicken 65"
+                        class="w-full h-32 object-cover rounded shadow-sm group-hover:scale-105 transition-transform duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCONWRB7UbI_f3v4wyldGlWT72APk2uPspklv4A7pGtC89H9kr4VNCevNih-5e1rVbtyD00OgMLV-WWqY_SKqbEeP2pEpX77Kr0qeeDcLdi6xEaf9JxOFgCbujA57G-oUyG6g13aBEj1zzCLcZl2hC3LFmWLC56QBaRZvJGE2xIxkGbcpzw7hQzqaoFETu50pR_z4hD1QraVTVgk8O0eqsxIK21YyRlHLwb0MRHOZbqrww2DEV4ms11zwspqQHUaijjamR0AJFWUCw" />
+                    <div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 text-xs font-bold rounded">Chicken 65
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border gold-border p-1">
+                    <img alt="Chowmein noodles"
+                        class="w-full h-32 object-cover rounded shadow-sm group-hover:scale-105 transition-transform duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyw9HTEonVHs4Ooxt_4iParBtMeGKdNSJKCPRcma7ulO_Re3Tu7B9bIJy_O7GK3WjLOACju1h0JK0kAjvRTutlHMjUx8233c_Fbiv-UdKtv3Lr88qopmjzPCxCyV2bngqx_aT1dP6euH5WTMUJ3Sdz67j4kwiWzrZtIyeg-mvXW3sMQzTVrDef2XxWA42OjaT3TwetziCG51EaeDAqw8RKrWZF_ot8LEr5RbLB_fKfGlXr8MDevIMKUwc-L__GLwO-f616Sj7GFoI" />
+                    <div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 text-xs font-bold rounded">Chowmein</div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border gold-border p-1">
+                    <img alt="Fresh Salad"
+                        class="w-full h-32 object-cover rounded shadow-sm group-hover:scale-105 transition-transform duration-300"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnA-IN4dl-Iqkov7lUnKnuGMS9jI3yiq1FLkG_Gy348hNY3r4i98BbCiCmIKLUhvZngTH9-07v95WqoFlg51rrLJrColXX-SqTmaM1n4Mk72LnANZkQfKGTlxQCwcypLBFceIZbyJ2g_igAICgoIU3V44R7phgQ6xQ0_qHIh9esSzCs7h8Q3vtKRy0rTsSW7_l2GmGE1Tsfo8N6LKtzLqabyMUzOruQ69XAJDxuCye0fxamMeoMGEw8vDm7ndrpJPjGGzZnX_NHM" />
+                    <div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 text-xs font-bold rounded">Fresh Salad
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <!-- Starters -->
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-6 border-b-2 gold-border inline-block pb-1"
+                        style="color:#8B1010;">Starters</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold">Veg Pakora</h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹150</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Crispy assorted vegetable fritters.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold">Paneer Tikka</h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹250</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Marinated cottage cheese, clay oven roasted.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold flex items-center gap-2">
+                                    Drums of Heaven
+                                    <span
+                                        class="text-white text-[10px] uppercase px-2 py-0.5 rounded-sm font-semibold tracking-wider"
+                                        style="background:#C9952A;">Must Try</span>
+                                </h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹320</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Spicy fried chicken winglets tossed in schezwan sauce.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold">Chicken 65</h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹280</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Spicy, deep-fried chicken bites with curry leaves.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Salads -->
+                <div>
+                    <h2 class="font-display text-3xl font-bold mb-6 border-b-2 gold-border inline-block pb-1"
+                        style="color:#8B1010;">Salads</h2>
+                    <div class="space-y-6 mb-10">
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold">Green Salad</h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹120</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Fresh seasonal vegetables sliced perfectly.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-end mb-1">
+                                <h3 class="font-display text-xl font-semibold">Kachumber Salad</h3>
+                                <div class="dotted-leader"></div>
+                                <span class="font-bold text-lg" style="color:#8B1010;">₹140</span>
+                            </div>
+                            <p class="text-sm opacity-70 italic">Chopped cucumber, tomatoes, and onions with tangy
+                                dressing.</p>
+                        </div>
+                    </div>
+                    <div class="border-l-4 gold-border pl-6 py-2 rounded-r-lg"
+                        style="background:rgba(201,149,42,0.06);">
+                        <p class="font-display text-xl italic leading-relaxed" style="color:#C9952A;">"Fresh
+                            ingredients, traditional spices, and a touch of heritage in every bite."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured image -->
+            <div class="mb-12 border-2 gold-border p-2 rounded-xl bg-white">
+                <img alt="Artisanal Samosas on wooden platter with dips"
+                    class="w-full h-64 md:h-80 object-cover rounded-lg"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxwljbRAXZD39cZaVCAVp06sSkNh65SSbsCPwhc-Iwv_wWUclwb8Dc4vL0LWf81Ilux_fk2nsovv_zYfYS0_rJRcxJvCoQUeH4s_dlhTAO19pbZaLmpspyotAsweKdUt_92oujgW1D-DKvLbhpIZ5ii5-D31NaNUdfikaNoeViqgffEN7mv5NRUtX-wYeU1PM_J8Oy1Z9cvd0vspl2xqODVMUOd7h8MQYQKF5glpHhZQHrt0KJFYwK4zoz1JbzJ8DyQhsmgKBSt-I" />
+                <p class="text-center font-display italic mt-3" style="color:#C9952A;">Signature Crispy Samosas served
+                    with mint and tamarind chutney.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t gold-border text-center">
+            <span class="material-icons mb-2" style="color:#C9952A; font-size:22px;">room_service</span>
+            <p class="text-sm opacity-60 uppercase tracking-widest font-medium mb-1">Please inform us of any food
+                allergies.</p>
+            <p class="text-xs opacity-50">Taxes as applicable | We levy 5% Service Charge | 7:30 AM – 10:30 PM</p>
+        </footer>
+    </div>
+
+    <!-- Print button -->
+    <button
+        class="fixed bottom-8 right-8 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 z-50 flex items-center justify-center no-print"
+        style="background:#8B1010;" onclick="window.print()">
+        <span class="material-icons">print</span>
+    </button>
+
+    <script>
+        function showTab(tab) {
+            // Hide all content
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.color = '#8B1010';
+                btn.style.background = '';
+            });
+            // Show selected
+            document.getElementById('content-' + tab).classList.add('active');
+            const btn = document.getElementById('tab-' + tab);
+            btn.classList.add('active');
+            btn.style.color = 'white';
+            btn.style.background = '#8B1010';
+        }
+    </script>
+</body>
+
+</html>

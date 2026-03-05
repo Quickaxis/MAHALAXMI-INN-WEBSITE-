@@ -1,6 +1,8 @@
-# Task: Simplify Room Section
+# Task: Refine Car Parking Mobile Layout
 
-- [x] Add Car Parking Section
-- [x] Implement Responsive CSS
-- [x] Copy and Rename Parking Photos (`parking-1.jpg`, `parking-2.jpg`)
-- [x] Push to GitHub
+- [x] Update parking grid style (Fix 1)
+- [x] Implement side-by-side photos with `aspect-ratio` (Fix 2)
+- [x] Add specific responsive CSS for parking section (Fix 3)
+- [x] Add `parking-photos` class for targeted styling
+- [x] Verify mobile layout responsiveness
+- [x] Commit and push to GitHub

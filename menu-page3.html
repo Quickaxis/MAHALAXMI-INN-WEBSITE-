@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desserts & Beverages | The Mahalaxmi Inn</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B1010",
+                        secondary: "#C9952A",
+                        "background-light": "#FAF6EE",
+                        "background-dark": "#1a1610",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Cormorant Garamond", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .dotted-leader {
+            border-bottom: 2px dotted #C9952A;
+            flex-grow: 1;
+            margin: 0 10px;
+            opacity: 0.6;
+            position: relative;
+            top: -6px;
+        }
+
+        .gold-border {
+            border-color: #C9952A;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-btn.active {
+            background: #8B1010;
+            color: white;
+        }
+
+        body {
+            background-color: #FAF6EE;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-body text-[#2c241b] min-h-screen py-10 px-4">
+
+    <!-- Back link -->
+    <div class="max-w-[900px] mx-auto mb-4 no-print">
+        <a href="index.html"
+            style="color:#8B1010; font-family:'Cormorant Garamond',serif; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+            <span class="material-icons" style="font-size:18px;">arrow_back</span> Back to The Mahalaxmi Inn
+        </a>
+    </div>
+
+    <!-- Menu card -->
+    <div class="max-w-[900px] mx-auto relative p-8 md:p-12 shadow-2xl bg-white border-2 gold-border rounded">
+        <!-- Corner accents -->
+        <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 gold-border -ml-2 -mt-2"></div>
+        <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 gold-border -mr-2 -mt-2"></div>
+        <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 gold-border -ml-2 -mb-2"></div>
+        <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 gold-border -mr-2 -mb-2"></div>
+
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <span class="material-icons text-4xl mb-2" style="color:#C9952A;">restaurant</span>
+            <h1 class="font-display text-5xl md:text-6xl font-bold tracking-wider uppercase mb-2"
+                style="color:#8B1010;">Mahalaxmi Rasoi</h1>
+            <p class="text-xl md:text-2xl italic mb-3" style="color:#C9952A;">Desserts &amp; Beverages</p>
+            <div class="text-sm tracking-wide opacity-75">
+                <p>Nizarapar, Near T.V. Centre, Dibrugarh, Assam</p>
+                <p>For Orders: +91 99544 31212</p>
+            </div>
+        </header>
+
+        <!-- Tab navigation -->
+        <nav class="flex flex-wrap justify-center gap-3 mb-10 no-print">
+            <a href="menu-page2.html"
+                class="px-6 py-2 rounded-full border gold-border font-semibold transition-all flex items-center gap-2"
+                style="color:#8B1010; text-decoration:none;">
+                <span class="material-icons" style="font-size:18px;">arrow_back</span> Prev Page
+            </a>
+            <button id="tab-desserts"
+                class="tab-btn active px-6 py-2 rounded-full border gold-border font-semibold transition-all"
+                onclick="showTab('desserts')">Desserts</button>
+            <button id="tab-drinks"
+                class="tab-btn px-6 py-2 rounded-full border gold-border font-semibold transition-all"
+                style="color:#8B1010;" onclick="showTab('drinks')">Cold Drinks &amp; Shakes</button>
+        </nav>
+
+        <!-- Content -->
+        <div id="content-desserts" class="tab-content active text-center py-20">
+            <h2 class="font-display text-3xl font-bold mb-4" style="color:#8B1010;">Sweet Endings</h2>
+            <p class="italic opacity-70">Our Dessert menu is currently being updated.</p>
+            <p class="mt-4">Ask about our seasonal Assamese sweets.</p>
+        </div>
+
+        <div id="content-drinks" class="tab-content text-center py-20">
+            <h2 class="font-display text-3xl font-bold mb-4" style="color:#8B1010;">Cold Drinks &amp; Shakes</h2>
+            <p class="italic opacity-70">Refreshing beverages to complement your meal.</p>
+            <p class="mt-4">Available throughout the day.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t gold-border text-center">
+            <span class="material-icons mb-2" style="color:#C9952A; font-size:22px;">room_service</span>
+            <p class="text-sm opacity-60 uppercase tracking-widest font-medium mb-1">Please inform us of any food
+                allergies.</p>
+            <p class="text-xs opacity-50">Taxes as applicable | We levy 5% Service Charge | 7:30 AM – 10:30 PM</p>
+        </footer>
+    </div>
+
+    <!-- Print button -->
+    <button
+        class="fixed bottom-8 right-8 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 z-50 flex items-center justify-center no-print"
+        style="background:#8B1010;" onclick="window.print()">
+        <span class="material-icons">print</span>
+    </button>
+
+    <script>
+        function showTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                btn.style.color = '#8B1010';
+                btn.style.background = '';
+            });
+            document.getElementById('content-' + tab).classList.add('active');
+            const btn = document.getElementById('tab-' + tab);
+            btn.classList.add('active');
+            btn.style.color = 'white';
+            btn.style.background = '#8B1010';
+        }
+    </script>
+</body>
+
+</html>
